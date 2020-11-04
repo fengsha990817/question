@@ -22,11 +22,45 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="2020 10 28 test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/QuestionApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_2.xml" afterDir="false" />
+    <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="2020 11 01 项目更新">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/403.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/allUsers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/ask.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/dialog/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/fire.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/login/style.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/test_rx.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/bj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/con_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/edit.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ls.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/p_big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/wxz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/xz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jQuery.fontFlex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.hDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/login/front.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/login/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/QuestionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/question/QuestionApplication.java" afterDir="false" />
     </list>
     <list id="90722afb-21f0-4e38-bcc2-87aaad7e0fac" name="Revert &quot;2020/10/22 项目创建 第一次提交&quot;" comment="Revert &quot;2020/10/22 项目创建 第一次提交&quot;&#10;&#10;This reverts commit 3cc23491">
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
@@ -89,12 +123,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.53626734" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,7 +156,8 @@
       <workItem from="1603376009360" duration="5129000" />
       <workItem from="1604124007300" duration="811000" />
       <workItem from="1604196210937" duration="280000" />
-      <workItem from="1604196512938" duration="654000" />
+      <workItem from="1604196512938" duration="1120000" />
+      <workItem from="1604201033940" duration="1594000" />
     </task>
     <task id="LOCAL-00001" summary="2020/10/22 项目创建 第一次提交">
       <created>1603376146769</created>
@@ -130,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603852582028</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2020 11 01 项目更新">
+      <created>1604200729375</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604200729375</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +219,8 @@
     <MESSAGE value="2020/10/22 项目创建 第一次提交" />
     <MESSAGE value="a" />
     <MESSAGE value="2020 10 28 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020 10 28 test" />
+    <MESSAGE value="2020 11 01 项目更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020 11 01 项目更新" />
   </component>
   <component name="WindowStateProjectService">
     <state x="273" y="0" key="#Project_Structure" timestamp="1603852547530">
@@ -207,10 +265,14 @@
     </state>
     <state x="273" y="0" key="SettingsEditor/0.0.1825.987@0.0.1825.987" timestamp="1603868290878" />
     <state x="440" y="28" key="SettingsEditor/0.0.2433.1329@0.0.2433.1329" timestamp="1604196179338" />
-    <state x="456" y="191" key="Vcs.Push.Dialog.v2" timestamp="1603852591881">
-      <screen x="0" y="0" width="1825" height="987" />
+    <state x="608" y="266" key="Vcs.Push.Dialog.v2" timestamp="1604200732520">
+      <screen x="0" y="0" width="2433" height="1329" />
     </state>
     <state x="456" y="191" key="Vcs.Push.Dialog.v2/0.0.1825.987@0.0.1825.987" timestamp="1603852591881" />
-    <state x="608" y="266" key="Vcs.Push.Dialog.v2/0.0.2433.1329@0.0.2433.1329" timestamp="1603376369360" />
+    <state x="608" y="266" key="Vcs.Push.Dialog.v2/0.0.2433.1329@0.0.2433.1329" timestamp="1604200732520" />
+    <state x="296" y="164" key="new project wizard" timestamp="1604200993846">
+      <screen x="0" y="0" width="2433" height="1329" />
+    </state>
+    <state x="296" y="164" key="new project wizard/0.0.2433.1329@0.0.2433.1329" timestamp="1604200993846" />
   </component>
 </project>

@@ -23,44 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="2020 11 01 项目更新">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/403.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/allUsers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/ask.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/dialog/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/fire.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/login/style.default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/test_rx.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/bj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/con_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/edit.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ls.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/p_big.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/wxz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/xz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/echarts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jQuery.fontFlex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.hDialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/login/front.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/login/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/QuestionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/question/QuestionApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <list id="90722afb-21f0-4e38-bcc2-87aaad7e0fac" name="Revert &quot;2020/10/22 项目创建 第一次提交&quot;" comment="Revert &quot;2020/10/22 项目创建 第一次提交&quot;&#10;&#10;This reverts commit 3cc23491">
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />

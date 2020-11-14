@@ -19,20 +19,58 @@
         <item name="GROUP_NODE:question" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:quxuanfeng" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="2020 11 01 项目更新">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="2020-11-04 环境搭建完毕">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/config/MyShiroRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/config/ShiroConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/controller/BackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/controller/BackSysRoleConroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/controller/BackSysUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/dao/SysMenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/dao/SysRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/dao/SysUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/dao/SysUserRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/dao/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/dto/FireResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/LayTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/QAnswer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/QProject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/QSubject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/QUserProject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/QUserSubject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/SysMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/SysRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/SysRoleMenuKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/SysUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/SysUserRoleKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/service/SysRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/service/SysUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/util/BeanUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/util/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/util/ParamUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/question/util/ShiroUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/SysUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
-    <list id="90722afb-21f0-4e38-bcc2-87aaad7e0fac" name="Revert &quot;2020/10/22 项目创建 第一次提交&quot;" comment="Revert &quot;2020/10/22 项目创建 第一次提交&quot;&#10;&#10;This reverts commit 3cc23491">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question.iml" beforeDir="false" afterPath="$PROJECT_DIR$/question.iml" afterDir="false" />
-    </list>
+    <list id="90722afb-21f0-4e38-bcc2-87aaad7e0fac" name="Revert &quot;2020/10/22 项目创建 第一次提交&quot;" comment="Revert &quot;2020/10/22 项目创建 第一次提交&quot;&#10;&#10;This reverts commit 3cc23491" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,10 +89,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="quxuanfeng" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -87,27 +126,59 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/question/dao" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.53626734" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.question.service.impl" />
+      <recent name="com.question.service" />
+      <recent name="com.question.dao" />
+      <recent name="com.question.dto" />
+      <recent name="com.question.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\question\src\main\java\com\question\dao" />
+      <recent name="E:\question\src\main\resources\mapper" />
+      <recent name="E:\question\src\main\java\com\question\entity" />
+      <recent name="E:\question\src\main\java\com\question\util" />
+      <recent name="E:\question\src\main\java\com\question\controller" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QuestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="question" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.question.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.question.QuestionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.QuestionApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -122,6 +193,7 @@
       <workItem from="1604196210937" duration="280000" />
       <workItem from="1604196512938" duration="1120000" />
       <workItem from="1604201033940" duration="1594000" />
+      <workItem from="1605055825186" duration="2566000" />
     </task>
     <task id="LOCAL-00001" summary="2020/10/22 项目创建 第一次提交">
       <created>1603376146769</created>
@@ -151,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604200729375</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2020-11-04 环境搭建完毕">
+      <created>1604454013488</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604454013488</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +251,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="quxuanfeng" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -184,7 +275,8 @@
     <MESSAGE value="a" />
     <MESSAGE value="2020 10 28 test" />
     <MESSAGE value="2020 11 01 项目更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020 11 01 项目更新" />
+    <MESSAGE value="2020-11-04 环境搭建完毕" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-11-04 环境搭建完毕" />
   </component>
   <component name="WindowStateProjectService">
     <state x="273" y="0" key="#Project_Structure" timestamp="1603852547530">
@@ -204,22 +296,42 @@
       <screen x="0" y="0" width="2433" height="1329" />
     </state>
     <state x="890" y="279" key="FileChooserDialogImpl/0.0.2433.1329@0.0.2433.1329" timestamp="1604196058858" />
-    <state width="2367" height="346" key="GridCell.Tab.0.bottom" timestamp="1604196201760">
+    <state width="2367" height="346" key="GridCell.Tab.0.bottom" timestamp="1605354510862">
       <screen x="0" y="0" width="2433" height="1329" />
     </state>
-    <state width="2367" height="346" key="GridCell.Tab.0.bottom/0.0.2433.1329@0.0.2433.1329" timestamp="1604196201760" />
-    <state width="2367" height="346" key="GridCell.Tab.0.center" timestamp="1604196201760">
+    <state width="2367" height="346" key="GridCell.Tab.0.bottom/0.0.2433.1329@0.0.2433.1329" timestamp="1605354510862" />
+    <state width="2367" height="346" key="GridCell.Tab.0.center" timestamp="1605354510862">
       <screen x="0" y="0" width="2433" height="1329" />
     </state>
-    <state width="2367" height="346" key="GridCell.Tab.0.center/0.0.2433.1329@0.0.2433.1329" timestamp="1604196201760" />
-    <state width="2367" height="346" key="GridCell.Tab.0.left" timestamp="1604196201760">
+    <state width="2367" height="346" key="GridCell.Tab.0.center/0.0.2433.1329@0.0.2433.1329" timestamp="1605354510862" />
+    <state width="2367" height="346" key="GridCell.Tab.0.left" timestamp="1605354510862">
       <screen x="0" y="0" width="2433" height="1329" />
     </state>
-    <state width="2367" height="346" key="GridCell.Tab.0.left/0.0.2433.1329@0.0.2433.1329" timestamp="1604196201760" />
-    <state width="2367" height="346" key="GridCell.Tab.0.right" timestamp="1604196201760">
+    <state width="2367" height="346" key="GridCell.Tab.0.left/0.0.2433.1329@0.0.2433.1329" timestamp="1605354510862" />
+    <state width="2367" height="346" key="GridCell.Tab.0.right" timestamp="1605354510862">
       <screen x="0" y="0" width="2433" height="1329" />
     </state>
-    <state width="2367" height="346" key="GridCell.Tab.0.right/0.0.2433.1329@0.0.2433.1329" timestamp="1604196201760" />
+    <state width="2367" height="346" key="GridCell.Tab.0.right/0.0.2433.1329@0.0.2433.1329" timestamp="1605354510862" />
+    <state width="2367" height="346" key="GridCell.Tab.1.bottom" timestamp="1605354510863">
+      <screen x="0" y="0" width="2433" height="1329" />
+    </state>
+    <state width="2367" height="346" key="GridCell.Tab.1.bottom/0.0.2433.1329@0.0.2433.1329" timestamp="1605354510863" />
+    <state width="2367" height="346" key="GridCell.Tab.1.center" timestamp="1605354510863">
+      <screen x="0" y="0" width="2433" height="1329" />
+    </state>
+    <state width="2367" height="346" key="GridCell.Tab.1.center/0.0.2433.1329@0.0.2433.1329" timestamp="1605354510863" />
+    <state width="2367" height="346" key="GridCell.Tab.1.left" timestamp="1605354510863">
+      <screen x="0" y="0" width="2433" height="1329" />
+    </state>
+    <state width="2367" height="346" key="GridCell.Tab.1.left/0.0.2433.1329@0.0.2433.1329" timestamp="1605354510863" />
+    <state width="2367" height="346" key="GridCell.Tab.1.right" timestamp="1605354510863">
+      <screen x="0" y="0" width="2433" height="1329" />
+    </state>
+    <state width="2367" height="346" key="GridCell.Tab.1.right/0.0.2433.1329@0.0.2433.1329" timestamp="1605354510863" />
+    <state x="174" y="80" key="MergeDialog" timestamp="1604454186759">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="174" y="80" key="MergeDialog/0.0.1825.987@0.0.1825.987" timestamp="1604454186759" />
     <state x="374" y="139" key="MultipleFileMergeDialog" timestamp="1603852319724">
       <screen x="0" y="0" width="1825" height="987" />
     </state>
@@ -229,11 +341,15 @@
     </state>
     <state x="273" y="0" key="SettingsEditor/0.0.1825.987@0.0.1825.987" timestamp="1603868290878" />
     <state x="440" y="28" key="SettingsEditor/0.0.2433.1329@0.0.2433.1329" timestamp="1604196179338" />
-    <state x="608" y="266" key="Vcs.Push.Dialog.v2" timestamp="1604200732520">
-      <screen x="0" y="0" width="2433" height="1329" />
+    <state x="456" y="191" key="Vcs.Push.Dialog.v2" timestamp="1604454227312">
+      <screen x="0" y="0" width="1825" height="987" />
     </state>
-    <state x="456" y="191" key="Vcs.Push.Dialog.v2/0.0.1825.987@0.0.1825.987" timestamp="1603852591881" />
+    <state x="456" y="191" key="Vcs.Push.Dialog.v2/0.0.1825.987@0.0.1825.987" timestamp="1604454227312" />
     <state x="608" y="266" key="Vcs.Push.Dialog.v2/0.0.2433.1329@0.0.2433.1329" timestamp="1604200732520" />
+    <state x="603" y="66" key="git4idea.branch.GitSmartOperationDialog" timestamp="1604454167473">
+      <screen x="0" y="0" width="1825" height="987" />
+    </state>
+    <state x="603" y="66" key="git4idea.branch.GitSmartOperationDialog/0.0.1825.987@0.0.1825.987" timestamp="1604454167473" />
     <state x="296" y="164" key="new project wizard" timestamp="1604200993846">
       <screen x="0" y="0" width="2433" height="1329" />
     </state>

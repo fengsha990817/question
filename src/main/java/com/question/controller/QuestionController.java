@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-public class QuestionController {
+public class    QuestionController {
 
     @Autowired
     private QuestionSerivce questionSerivce;

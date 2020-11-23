@@ -30,8 +30,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="20201123">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/question/QuestionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/question/QuestionApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/question/service/QuestionSerivce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/question/service/QuestionSerivce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/question/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/question/controller/QuestionController.java" afterDir="false" />
     </list>
     <list id="90722afb-21f0-4e38-bcc2-87aaad7e0fac" name="Revert &quot;2020/10/22 项目创建 第一次提交&quot;" comment="Revert &quot;2020/10/22 项目创建 第一次提交&quot;&#10;&#10;This reverts commit 3cc23491" />
     <option name="SHOW_DIALOG" value="false" />
@@ -347,11 +346,11 @@
     </state>
     <state x="273" y="0" key="SettingsEditor/0.0.1825.987@0.0.1825.987" timestamp="1603868290878" />
     <state x="440" y="28" key="SettingsEditor/0.0.2433.1329@0.0.2433.1329" timestamp="1605774513373" />
-    <state x="608" y="266" key="Vcs.Push.Dialog.v2" timestamp="1606127075087">
+    <state x="608" y="266" key="Vcs.Push.Dialog.v2" timestamp="1606141906472">
       <screen x="0" y="0" width="2433" height="1329" />
     </state>
     <state x="456" y="191" key="Vcs.Push.Dialog.v2/0.0.1825.987@0.0.1825.987" timestamp="1604454227312" />
-    <state x="608" y="266" key="Vcs.Push.Dialog.v2/0.0.2433.1329@0.0.2433.1329" timestamp="1606127075087" />
+    <state x="608" y="266" key="Vcs.Push.Dialog.v2/0.0.2433.1329@0.0.2433.1329" timestamp="1606141906472" />
     <state x="603" y="66" key="git4idea.branch.GitSmartOperationDialog" timestamp="1604454167473">
       <screen x="0" y="0" width="1825" height="987" />
     </state>

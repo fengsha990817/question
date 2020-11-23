@@ -1,0 +1,150 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.w3.org/1999/xhtml">
+<head th:replace="back/include :: header">
+    <script src="../../static/js/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="selectForm">
+        <div class="layui-form selectFactor" lay-filter="myDiv">
+            <select name="" id="" lay-filter="mySelect">
+                <option value="0">主因子查询</option>
+                <option value="1">次因子查询</option>
+            </select>
+        </div>
+</div>
+
+<div class="echartsTbale" id="factor"></div>
+<table class="layui-hide" id="demoTable" lay-filter="tableFilter"></table>
+<input type="hidden" id="upId" th:value="${upId}"/>
+<script src="/js/echarts.min.js"></script>
+<script type="text/javascript">
+    let tableIns;
+    let layer;
+    let table;
+    let laydate;
+    $(function () {
+        let myChart = echarts.init(document.getElementById('factor'));
+        let echartsOption = {
+            color: ['#3398DB'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: [],
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: [],
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: true,		//开启显示
+                                position: 'top',	//在上方显示
+                                textStyle: {	    //数值样式
+                                    color: '#3398DB',
+                                    fontSize: 16
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        };
+        getFactorData(0);
+
+        //加载下拉框
+        layui.use(['laydate', 'laypage', 'layer', 'table', 'form'], function () {
+            layer = layui.layer; //弹层
+            table = layui.table;//表格
+            laydate = layui.laydate; //元素操作
+            form = layui.form;
+            //执行一个 table 实例
+            tableIns = table.render({
+                elem: '#demoTable'
+                , url: '/back/getUserSubjectInfo'
+                , method: 'post'
+                , contentType: 'application/json'
+                , id: 'demoTable'
+                , parseData: function (res) { //res 即为原始返回的数据
+                    return {
+                        "code": res.status, //解析接口状态
+                        "msg": res.message, //解析提示文本
+                        "count": res.count, //解析数据长度
+                        "data": res.data //解析数据列表
+                    };
+                }
+                , where: {id: parseInt($("#upId").val())}
+                , response: {
+                    statusCode: 1 //规定成功的状态码，默认：0
+                }
+                , page: true //开启分页
+                , cols: [
+                    [
+                        /*{type:'checkbox'}*/
+                        {field: 'realName', title: '用户昵称', align: 'center'}
+                        , {field: 'projectName', title: '试卷标题', align: 'center'}
+                        , {field: 'subjectSort', title: '题目序号', align: 'center'}
+                        , {field: 'subjectName', title: '题目标题', align: 'center'}
+                        , {field: 'answerSort', title: '答案序号', align: 'center'}
+                        , {field: 'answerContent', title: '答案', align: 'center'}
+                        , {field: 'score', title: '答案分值', align: 'center'}
+                    ]
+                ]
+            });
+            //常规用法
+
+            $("#search").bind("click", function () {
+                location.href = "/back";
+            });
+            form.render('select', 'myDiv');
+
+            form.on('select(mySelect)', function (data) {
+                getFactorData(data.value);
+            })
+        });
+
+        function getFactorData(factorType) {
+            $.ajax({
+                url: "/back/getUserProjectFactor",
+                type: "post",
+                data: {userProjectId: $("#upId").val(), factorType: factorType},
+                dataType: 'json',
+                success: function (data) {
+                    echartsOption.xAxis[0].data=[];
+                    echartsOption.series[0].data=[];
+                    $.each(data.data, function (index, item) {
+                        echartsOption.xAxis[0].data.push(item.factorName===null||item.factorName===''?'总均分':item.factorName);
+                        echartsOption.series[0].data.push((parseFloat(item.factorScore) / parseInt(item.factorCount)).toFixed(2));
+                    });
+                    myChart.setOption(echartsOption);
+                }
+
+            });
+        }
+    });
+
+</script>
+</body>

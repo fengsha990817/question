@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.w3.org/1999/xhtml">
+<head th:replace="back/include :: header"></head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">问卷调查后台管理系统</div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    <span th:text="${name}"></span>
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="/managerInfo" target="main">个人资料</a></dd>
+                    <!-- <dd><a href="">安全设置</a></dd>-->
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="/logout">注销登录</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li shiro:hasPermission="system:view" class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">系统管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a shiro:hasPermission="system:sysUser:view" href="/back/sysUser/" target="main">操作员管理</a>
+                        </dd>
+                        <dd><a shiro:hasPermission="system:role:view" href="/back/sysRole/" target="main">角色管理</a></dd>
+                    </dl>
+                </li>
+                <li shiro:hasPermission="common:view" class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">业务管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a shiro:hasPermission="common:user:view" href="/back/user/" target="main">用户管理</a></dd>
+                        <dd><a shiro:hasPermission="common:user:view" href="/back/question/" target="main">答题管理</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <iframe id="iframe" src="/back/question/" name="main"></iframe>
+    </div>
+    <div th:include="back/include :: footer" class="layui-footer"></div>
+</div>
+<div th:replace="back/include :: assembly_dependency"></div>
+<script>
+    $(function(){
+        let url = sessionStorage.getItem("url");
+        $("#iframe").attr("src",url===null?'/back/question/':url);
+        $(".layui-nav-child").children("dd").children("a").bind('click',function(){
+            let url = $(this).attr("href");
+            sessionStorage.setItem("url",url);
+        })
+
+    });
+
+
+</script>
+</body>
+</html>

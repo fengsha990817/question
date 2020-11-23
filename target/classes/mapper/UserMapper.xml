@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.question.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.question.entity.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sno" jdbcType="VARCHAR" property="sno"/>
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="mail" jdbcType="VARCHAR" property="mail" />
+    <result column="gender" jdbcType="INTEGER" property="gender" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="is_delete" jdbcType="INTEGER" property="isDelete" />
+    <result column ="major" jdbcType="VARCHAR" property="major"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id,sno,username, password, mobile, real_name, type, mail, gender, create_time, status,
+    is_delete,major
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from q_user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from q_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.question.entity.User">
+    insert into q_user (id,sno, username, password,
+      mobile, real_name, type, 
+      mail, gender, create_time, 
+      status, is_delete,major)
+    values (#{id,jdbcType=INTEGER}, #{sno,jdbcType=VARCHAR},#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+      #{mobile,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, 
+      #{mail,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{status,jdbcType=INTEGER}, #{isDelete,jdbcType=INTEGER},#{major,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.question.entity.User">
+    insert into q_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="sno != null">
+        sno,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="realName != null">
+        real_name,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="mail != null">
+        mail,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="isDelete != null">
+        is_delete,
+      </if>
+      <if test="major != null">
+        major,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sno != null">
+        #{sno,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="mail != null">
+        #{mail,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=INTEGER},
+      </if>
+      <if test="major != null">
+        #{major,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.question.entity.User">
+    update q_user
+    <set>
+      <if test="sno != null">
+        sno = #{sno,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        real_name = #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="mail != null">
+        mail = #{mail,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="isDelete != null">
+        is_delete = #{isDelete,jdbcType=INTEGER},
+      </if>
+      <if test="major != null">
+        major = #{major,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.question.entity.User">
+    update q_user
+    set
+      sno = #{username,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      real_name = #{realName,jdbcType=VARCHAR},
+      type = #{type,jdbcType=INTEGER},
+      mail = #{mail,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=INTEGER},
+      is_delete = #{isDelete,jdbcType=INTEGER},
+      major = #{major,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="getUserByUsername" parameterType="string" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"></include>
+        from q_user
+        where `username` = #{username,jdbcType=VARCHAR} and `status` = 0 and is_delete=0
+  </select>
+
+  <select id="getUserListByPage" resultMap="BaseResultMap" parameterType="com.question.entity.User">
+    select <include refid="Base_Column_List"></include>
+    from q_user ut
+    <where>
+      <if test="username != null">
+        ut.username like concat("%",concat(#{username,jdbcType=VARCHAR},"%"))
+      </if>
+      <if test="realName != null">
+        and ut.real_name like concat("%",concat(#{realName,jdbcType=VARCHAR},"%"))
+      </if>
+      <if test="mobile != null">
+        and ut.mobile like concat("%",concat(#{mobile,jdbcType=VARCHAR},"%"))
+      </if>
+      <if test="major != null">
+        and ut.major =  like concat("%",concat(#{major,jdbcType=VARCHAR},"%"))
+      </if>
+      <if test="gender != null">
+        and ut.gender = #{gender,jdbcType=INTEGER}
+      </if>
+      <if test="status != null">
+        and ut.status = #{status,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by ut.create_time limit #{offset,jdbcType=INTEGER},#{limit,jdbcType=INTEGER}
+  </select>
+  <select id="getUserCountByPage" resultType="int" parameterType="com.question.entity.User">
+    select count(*)
+    from q_user
+    <where>
+      <if test="username != null">
+        username like concat("%",concat(#{username,jdbcType=VARCHAR},"%"))
+      </if>
+      <if test="realName != null">
+        and real_name like concat("%",concat(#{realName,jdbcType=VARCHAR},"%"))
+      </if>
+      <if test="mobile != null">
+        and mobile like concat("%",concat(#{mobile,jdbcType=VARCHAR},"%"))
+      </if>
+      <if test="major != null">
+        and ut.major =  like concat("%",concat(#{major,jdbcType=VARCHAR},"%"))
+      </if>
+      <if test="gender != null">
+        and gender = #{gender,jdbcType=INTEGER}
+      </if>
+      <if test="status != null">
+        and status = #{status,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
+</mapper>

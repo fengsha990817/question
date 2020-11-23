@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>选择测评</title>
+    <!--手机端需要添加-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <!--手机端需要添加---->
+    <link rel="stylesheet" href="/css/test_rx.css">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="/js/jQuery.fontFlex.js"></script>
+    <script>
+        $(function () {
+            //320宽度的时候html字体大小是20px;、640宽度的时候html字体大小是40px;
+            $('html').fontFlex(20, 40, 16);
+        });
+    </script>
+</head>
+<body>
+<div class="main">
+    <div class="header" style="text-align: right">
+        <a href="/logout">退出</a>
+    </div>
+    <div class="wjdt_title" style="text-align: left">
+        <div style="display: inline-block">
+            <img src="/images/ls.svg" style="width:3rem;" alt=""/>
+        </div>
+        <div style="display: inline-block">
+            <p>心理素质测评系统</p>
+        </div>
+    </div>
+    <div class="dtks_box">
+        <div class="kcks_title_ts">
+            <h4 class=" kctm_zzbt" th:text="${project.title}"></h4>
+            <div class="bitr_box" style="text-align: left;">
+               <h5 th:text="${project.description}"></h5>
+            </div>
+        </div>
+    </div>
+    <div class="kasj_db_but" id="start_btn"><a th:href="@{'/?pid='+${project.id}}">开始答题</a></div>
+    <!--结束------------------------------------------>
+    <div class="li0"></div>
+</div>
+</body>
+</html>

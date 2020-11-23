@@ -28,7 +28,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="20201123" />
+    <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="20201123">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/question/QuestionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/question/QuestionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/question/service/QuestionSerivce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/question/service/QuestionSerivce.java" afterDir="false" />
+    </list>
     <list id="90722afb-21f0-4e38-bcc2-87aaad7e0fac" name="Revert &quot;2020/10/22 项目创建 第一次提交&quot;" comment="Revert &quot;2020/10/22 项目创建 第一次提交&quot;&#10;&#10;This reverts commit 3cc23491" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +113,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QuestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="question" />
       <extension name="coverage">
@@ -143,6 +158,7 @@
       <workItem from="1604201033940" duration="1594000" />
       <workItem from="1605055825186" duration="3878000" />
       <workItem from="1605662710534" duration="4284000" />
+      <workItem from="1606127155043" duration="561000" />
     </task>
     <task id="LOCAL-00001" summary="2020/10/22 项目创建 第一次提交">
       <created>1603376146769</created>
@@ -193,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606127014606</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="20201123">
+      <created>1606127214621</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606127214621</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +250,21 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -294,14 +332,16 @@
       <screen x="0" y="0" width="2433" height="1329" />
     </state>
     <state width="2367" height="346" key="GridCell.Tab.1.right/0.0.2433.1329@0.0.2433.1329" timestamp="1605354510863" />
-    <state x="174" y="80" key="MergeDialog" timestamp="1604454186759">
-      <screen x="0" y="0" width="1825" height="987" />
+    <state x="232" y="108" key="MergeDialog" timestamp="1606127265525">
+      <screen x="0" y="0" width="2433" height="1329" />
     </state>
     <state x="174" y="80" key="MergeDialog/0.0.1825.987@0.0.1825.987" timestamp="1604454186759" />
-    <state x="374" y="139" key="MultipleFileMergeDialog" timestamp="1603852319724">
-      <screen x="0" y="0" width="1825" height="987" />
+    <state x="232" y="108" key="MergeDialog/0.0.2433.1329@0.0.2433.1329" timestamp="1606127265525" />
+    <state x="739" y="298" key="MultipleFileMergeDialog" timestamp="1606127265537">
+      <screen x="0" y="0" width="2433" height="1329" />
     </state>
     <state x="374" y="139" key="MultipleFileMergeDialog/0.0.1825.987@0.0.1825.987" timestamp="1603852319724" />
+    <state x="739" y="298" key="MultipleFileMergeDialog/0.0.2433.1329@0.0.2433.1329" timestamp="1606127265537" />
     <state x="440" y="28" key="SettingsEditor" timestamp="1605774513373">
       <screen x="0" y="0" width="2433" height="1329" />
     </state>

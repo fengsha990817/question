@@ -1,11 +1,11 @@
-package com.randian.question.service;
+package com.question.service;
 
 
-import com.randian.question.dto.QuestionDto;
-import com.randian.question.dto.UserAnswerInfoDto;
-import com.randian.question.dto.UserProjectFactorDto;
-import com.randian.question.entity.QUserProject;
-import com.randian.question.entity.QUserSubject;
+import com.question.dto.QuestionDto;
+import com.question.dto.UserAnswerInfoDto;
+import com.question.dto.UserProjectFactorDto;
+import com.question.entity.QUserProject;
+import com.question.entity.QUserSubject;
 
 import java.util.List;
 

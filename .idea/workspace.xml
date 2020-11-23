@@ -23,15 +23,12 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:quxuanfeng" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="2020-11-14 部分代码提交">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question.iml" beforeDir="false" afterPath="$PROJECT_DIR$/question.iml" afterDir="false" />
-    </list>
+    <list default="true" id="f0e7464a-fc0a-419e-942c-37d973b86188" name="Default Changelist" comment="20201123" />
     <list id="90722afb-21f0-4e38-bcc2-87aaad7e0fac" name="Revert &quot;2020/10/22 项目创建 第一次提交&quot;" comment="Revert &quot;2020/10/22 项目创建 第一次提交&quot;&#10;&#10;This reverts commit 3cc23491" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +142,7 @@
       <workItem from="1604196512938" duration="1120000" />
       <workItem from="1604201033940" duration="1594000" />
       <workItem from="1605055825186" duration="3878000" />
-      <workItem from="1605662710534" duration="3903000" />
+      <workItem from="1605662710534" duration="4284000" />
     </task>
     <task id="LOCAL-00001" summary="2020/10/22 项目创建 第一次提交">
       <created>1603376146769</created>
@@ -189,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605355249050</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="20201123">
+      <created>1606127014606</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606127014606</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +220,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="quxuanfeng" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -236,7 +240,8 @@
     <MESSAGE value="2020 11 01 项目更新" />
     <MESSAGE value="2020-11-04 环境搭建完毕" />
     <MESSAGE value="2020-11-14 部分代码提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-11-14 部分代码提交" />
+    <MESSAGE value="20201123" />
+    <option name="LAST_COMMIT_MESSAGE" value="20201123" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="28" key="#Project_Structure" timestamp="1606125559945">
@@ -302,11 +307,11 @@
     </state>
     <state x="273" y="0" key="SettingsEditor/0.0.1825.987@0.0.1825.987" timestamp="1603868290878" />
     <state x="440" y="28" key="SettingsEditor/0.0.2433.1329@0.0.2433.1329" timestamp="1605774513373" />
-    <state x="608" y="266" key="Vcs.Push.Dialog.v2" timestamp="1606125389517">
+    <state x="608" y="266" key="Vcs.Push.Dialog.v2" timestamp="1606127075087">
       <screen x="0" y="0" width="2433" height="1329" />
     </state>
     <state x="456" y="191" key="Vcs.Push.Dialog.v2/0.0.1825.987@0.0.1825.987" timestamp="1604454227312" />
-    <state x="608" y="266" key="Vcs.Push.Dialog.v2/0.0.2433.1329@0.0.2433.1329" timestamp="1606125389517" />
+    <state x="608" y="266" key="Vcs.Push.Dialog.v2/0.0.2433.1329@0.0.2433.1329" timestamp="1606127075087" />
     <state x="603" y="66" key="git4idea.branch.GitSmartOperationDialog" timestamp="1604454167473">
       <screen x="0" y="0" width="1825" height="987" />
     </state>

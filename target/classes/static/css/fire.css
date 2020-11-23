@@ -1,0 +1,27 @@
+.layui-form-label.is-required:before {
+    content: '* ';
+    color: red;
+}
+.layui-body{
+    overflow: hidden;
+}
+iframe{
+    width:100%;
+    height:100%;
+}
+.fireUi-form-label{
+    text-align: right;
+    padding:7px 15px 0px 15px;
+}
+.echartsTbale{
+    height:450px;
+}
+
+.selectFactor{
+    width:200px;
+    display: inline-block;
+}
+.selectForm{
+    text-align: right;
+
+}

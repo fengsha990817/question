@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #009ece url(../images/bj.jpg) center top no-repeat;
+    background-size: 100% auto;
+    color: #2f3441;
+}
+
+span, p, ul, li, h1, h2, h3, h4, h5, input {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+h2, h3 {
+    font-size: 0.7rem;
+    line-height: 100%
+}
+
+ul, li {
+    list-style: none;
+}
+
+img {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+.clear {
+    clear: both
+}
+
+.text_c {
+    text-align: center;
+}
+
+i {
+    font-style: normal;
+}
+
+.hide {
+    display: none;
+}
+
+/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
+a, span, button, input, li, ul {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+/*考试-----------------------------------------*/
+
+.kasj_db_but {
+    width: 80%;
+    height: auto;
+    background: #fab033;
+    text-align: center;
+    overflow: hidden;
+    margin: 1.3rem auto 0;
+    border-radius: 20px;
+    border-bottom: solid 3px #c48b2a
+}
+
+/*点击后效果*/
+.kasj_db_but:active {
+    border-top: solid 3px #c48b2a;
+    border-bottom: none;
+}
+
+.kasj_db_but a {
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+    color: #fff;
+    line-height: 2.2rem;
+    font-size: 0.8rem;
+    text-shadow: 0 1px 1px #c78d2c;
+    cursor: pointer;
+    user-select: none;
+    user-focus: none;
+}
+.dxt_box li{
+    cursor: pointer;
+    outline: none;
+}
+.dxt_box li span{
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.h50 {
+    height: 2.5rem;
+}
+
+.kcks_title_ts {
+    margin: 0.4rem;
+    padding: 0.2rem 0.1rem;
+    text-shadow: 0 1px 1px #fff;
+    border: 2px dotted #017c9e;
+    border-radius: 1.2rem;
+}
+
+.kcks_title_ts .kctm_zzbt {
+    font-size: 0.9rem;
+    color: #2f3441;
+    margin-top: 0.5rem;
+    text-shadow: 0 1px 1px #fff;
+}
+
+.dxt_box {
+    margin-top: 0.5rem;
+}
+.bitr_box li{
+    line-height:1.5rem;
+    font-size: 1rem;
+
+}
+.bitr_box a{
+    border:solid 1px #d2d8e8;
+    border-radius: 20px;
+    background-color: #d2d8e8;
+}
+
+.dxt_box li {
+    overflow: hidden;
+    height: auto;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 1px 1px #fff;
+}
+
+.dxt_box li em {
+    display: block;
+    font-style: normal;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border: 1px solid #99a4bf;
+    color: #99a4bf;
+    text-align: center;
+    width: 0.8rem;
+    border-radius: 50%;
+    float: left;
+    margin-left: 0.5rem;
+}
+
+.dxt_box li span {
+    display: block;
+    margin-left: 0.2rem;
+    float: left;
+    line-height: 0.8rem;
+    color: #99a4bf;
+    font-size: 0.6rem;
+}
+
+.dxt_box li.on em {
+    border: 1px solid #f05150;
+    background: #f05150;
+    color: #f05150;
+}
+
+.dxt_box li.on span {
+    color: #f05150;
+}
+
+.tm_db_tip .kstm_fx i {
+    font-size: 0.9rem;
+    padding-right: 0.25rem;
+    color: #40bb6b;
+}
+
+.ckda_box {
+    margin-top: 1rem;
+}
+
+.nidedf_red i {
+    font-size: 0.6rem;
+}
+
+.nidedf_grenn i {
+    font-size: 0.6rem;
+}
+
+.zql_list li {
+    font-size: 0.55rem;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    color: #99a4bf;
+}
+
+.zql_list li p {
+    color: #333;
+    padding-bottom: 0.55rem;
+}
+
+.dtks_box {
+    width: 90%;
+    line-height: 0.9rem;
+    font-size: 0.6rem;
+    margin: 0.5rem auto;
+    color: #333;
+    background: #FFF;
+    border: 2px solid #014964;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+.dts_con strong {
+    font-weight: 400;
+    color: #f05150;
+}
+
+.cxjh_bt {
+    line-height: 1.2rem;
+    background: #40bb6b;
+    color: #fff;
+    border: 1px solid #ddd;
+    width: 94%;
+    margin: 0.5rem auto 0;
+    box-shadow: 0 0 2px #ddd;
+    border-radius: 5px;
+}
+
+.cxjh_bt span {
+    line-height: 1.5rem;
+    display: block;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.cxjh_bt span strong {
+    color: #f9fe70;
+    font-weight: 400;
+}
+
+.dts_con p {
+    margin-bottom: 1rem;
+}
+
+.wjdt_title {
+    color: #fff;
+    padding: 1rem;
+}
+.wjdt_person{
+    color: #fff;
+}
+.wjdt_person p {
+    margin-left:2rem;
+    font-size: 0.5rem;
+    color: #fff;
+    padding-top: 0.5rem;
+}
+
+.wjdt_title h3 {
+    font-size: 1.8rem;
+}
+
+.wjdt_title p {
+    font-size: 0.7rem;
+    color: #fff100;
+    padding-top: 0.5rem;
+}
+
+/*弹框*/
+
+.tck_box .tck_conn h4 {
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.tck_box .tck_conn .qsx_shf li {
+    float: left;
+    width: 50%;
+    height: 2.5rem;
+}
+
+.tck_box .tck_conn .qsx_shf a {
+    width: 85%;
+    display: block;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    line-height: 2rem;
+    background: #fab033;
+    box-shadow: 0 0.2rem #c48b2a;
+    text-shadow: 0 1px 1px #c78d2c;
+    margin: 0 auto;
+}
+
+/*移动后效果*/
+.tck_box .tck_conn .qsx_shf a:hover {
+    box-shadow: 0 0.1rem #c48b2a;
+    margin-top: 0.1rem;
+}
+
+/*点击后效果*/
+.tck_box .tck_conn .qsx_shf a:active {
+    box-shadow: 0 0 #c48b2a;
+    margin-top: 0.2rem;
+}
+
+/*移动后效果*/
+
+/*点击后效果*/
+
+.bitr_box input {
+    height: 2rem;
+    border:none;
+    border-bottom: 1px solid #ddd;
+    width: 10rem;
+    color: #333;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: #FFF;
+    box-shadow: 0 0 2px #ccc;
+    text-align: center;
+    border-radius: 20px;
+    outline: none;
+}
+.bitr_box input:focus {
+    box-shadow: 0 0 3px #000;
+}
+.bitr_box{
+    padding:20px;
+}
+
+.kcks_title_ts .jgyem_ck strong {
+    font-weight: 400;
+    color: #f05150;
+}
+
+.kcks_title_ts .gzewm img {
+    width: 7rem;
+    box-shadow: 0 0 2px #ddd;
+}
+
+.dts_con .qyjj_box {
+    line-height: 0.8rem;
+    padding-top: 0.25rem;
+    color: #666;
+}
+
+.kszt_one h4 {
+    color: #ec631f;
+    font-size: 0.65rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.kszt_one .qsx_shf li {
+    float: left;
+    width: 50%;
+    height: 2.5rem;
+}
+
+.kszt_one .qsx_shf a {
+    width: 85%;
+    display: block;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    line-height: 2rem;
+    background: #fab033;
+    box-shadow: 0 0.2rem #c48b2a;
+    text-shadow: 0 1px 1px #c78d2c;
+    margin: 0 auto;
+}
+
+/*移动后效果*/
+.kszt_one .qsx_shf a:hover {
+    box-shadow: 0 0.1rem #c48b2a;
+    margin-top: 0.1rem;
+}
+
+/*点击后效果*/
+.kszt_one .qsx_shf a:active {
+    box-shadow: 0 0 #c48b2a;
+    margin-top: 0.2rem;
+}
+
+/*移动后效果*/
+
+/*点击后效果*/
+
+
+.tatble_table td {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 0.15rem 0 0.15rem 0.5rem;
+}
+
+.tatble_table .bt td {
+    background: #eee;
+    color: #333;
+    padding: 0.2rem 0 0.2rem 0.5rem;
+}
+
+
+.main{
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 750px;
+}
+
+/*下拉框css 开始*/
+
+.selectD *{
+    padding: 0;
+    margin: 0;
+
+}
+.selectD{
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.selectD .select{
+    width: 10rem;
+    height: 2rem;
+    background: #FFFFFF;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    border:solid 1px #ddd;
+    border-radius:20px;
+}
+.selectD .select::after{
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-left: 1px solid #D0D0D0;
+    border-bottom: 1px solid #D0D0D0;
+    top: 0.5rem;
+    right: 0.5rem;
+    position: absolute;
+    transform: rotate(-46deg);
+    transition: all .2s ease-in;
+}
+.selectD .select p{
+    width: 10.5rem;
+    line-height: 2rem;
+    font-size: 0.35rem;
+    color: #666666;
+}
+.selectD .select ul{
+    width: 10rem;
+    height:4rem;
+    display: block;
+    font-size: 0.35rem;
+    background: #FFFFFF;
+    position: absolute;
+    top: 2rem;
+    left: 0.2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in;
+/*    border:solid 1px #ddd;*/
+    border-radius: 10px;
+}
+.selectD .select ul li{
+    width: 100%;
+    height: 2rem;
+    font-size: 0.4rem;
+    line-height: 1rem;
+    padding: 0 15px;
+    list-style: none;
+    color: #666666;
+    border-radius: 10px;
+}
+.selectD .select ul li.Selected{
+    background: #ddd;
+    color: #FFFFFF;
+}
+.selectD .select ul li:hover{
+    background: #D0D0D0;
+}
+@-webkit-keyframes slide-down{
+    0%{transform: scale(1,0);}
+    25%{transform: scale(1,1.2);}
+    50%{transform: scale(1,0.85);}
+    75%{transform: scale(1,1.05);}
+    100%{transform: scale(1,1);}
+}
+
+.selectD .select.open ul{
+    max-height: 250px;
+    transform-origin: 50% 0;
+    -webkit-animation: slide-down .3s ease-in;
+    transition: max-height .2s ease-in;
+}
+.selectD .select.open::after{
+    transform: rotate(134deg);
+    transition: all .3s ease-in;
+    top: 18px;
+
+}
+.header{
+    height:1rem;
+    padding-top:0.5rem;
+    font-size: 0.5rem;
+}
+/*下拉框css 结束*/
+/*弹出框样式*/
+.HTooltip{
+    font-size: 0.5rem;
+}
+

@@ -1,4 +1,4 @@
-package com.randian.question.controller;
+package com.question.controller;
 
 import com.question.dto.FireResult;
 import com.question.entity.QUserSubject;

@@ -1,4 +1,4 @@
-package com.randian.question.controller;
+package com.question.controller;
 
 import com.question.entity.User;
 import com.question.service.UserService;

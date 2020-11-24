@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.question.dao.QSubjectMapper">
+    <resultMap id="BaseResultMap" type="com.question.entity.QSubject">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="project_id" jdbcType="INTEGER" property="projectId" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="sort" jdbcType="DOUBLE" property="sort" />
+        <result column="score" jdbcType="DOUBLE" property="score" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="type" jdbcType="INTEGER" property="type" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="factor_type" jdbcType="INTEGER" property="factorType" />
+        <result column="factor_id" jdbcType="INTEGER" property="factorId" />
+        <result column="subfactorId" jdbcType="INTEGER" property="subfactorId" />
+        <collection property="answerList" ofType="com. question.entity.QAnswer" column="answer">
+            <id property="id" column="answer_id" javaType="int" jdbcType="INTEGER" />
+            <result column="answer_content" javaType="string" jdbcType="VARCHAR" property="content" />
+            <result column="answer_subject_id" jdbcType="INTEGER" property="subjectId" />
+            <result column="answer_score" jdbcType="DOUBLE" property="score" />
+            <result column="answer_sort" jdbcType="INTEGER" property="sort" />
+            <result column="answer_create_time" jdbcType="TIMESTAMP" property="createTime" />
+        </collection>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, project_id, title,sort, score, create_time, type, status,factor_type,factor_id,subfactor_id
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from q_subject
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from q_subject
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.question.entity.QSubject">
+    insert into q_subject (id, project_id, title,sort,
+      score, create_time, type, status,factor_type,factor_id,subfactor_id)
+    values (#{id,jdbcType=INTEGER}, #{projectId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR},#{sort,jdbcType=INTEGER}
+      #{score,jdbcType=DOUBLE}, #{createTime,jdbcType=TIMESTAMP}, #{type,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER}, #{factorType,jdbcType=INTEGER}, #{factorId,jdbcType=INTEGER}, #{subfactorId,jdbcType=INTEGER})
+  </insert>
+    <insert id="insertSelective" parameterType="com.question.entity.QSubject">
+        insert into q_subject
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="projectId != null">
+                project_id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="score != null">
+                score,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="factorType != null">
+                factor_type,
+            </if>
+            <if test="factorId != null">
+                factor_id,
+            </if>
+            <if test="subfactorId != null">
+                subfactor_id
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="projectId != null">
+                #{projectId,jdbcType=INTEGER},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="score != null">
+                #{score,jdbcType=DOUBLE},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="factorType != null">
+                #{factor_type,jdbcType=INTEGER},
+            </if>
+            <if test="factorId != null">
+                #{factor_id,jdbcType=INTEGER},
+            </if>
+            <if test="subfactorId != null">
+                #{subfactor_id,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.question.entity.QSubject">
+        update q_subject
+        <set>
+            <if test="projectId != null">
+                project_id = #{projectId,jdbcType=INTEGER},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                type = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="score != null">
+                score = #{score,jdbcType=DOUBLE},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="factorType != null">
+                factor_type = #{factorType,jdbcType=INTEGER},
+            </if>
+            <if test="factorId != null">
+                factor_id = #{factorId,jdbcType=INTEGER},
+            </if>
+            <if test="subfactorId != null">
+                subfactor_id = #{subfactorId,jdbcType=INTEGER},
+            </if>
+
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.question.entity.QSubject">
+    update q_subject
+    set project_id = #{projectId,jdbcType=INTEGER},
+      title = #{title,jdbcType=VARCHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      score = #{score,jdbcType=DOUBLE},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      type = #{type,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      factor_type = #{factorType,jdbcType=INTEGER},
+      factor_id = #{factorId,jdbcType=INTEGER},
+      subfactor_id = #{subfactorId,jdbcType=INTEGER},
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+    <select id="getSubjectListByProject" parameterType="int" resultMap="BaseResultMap">
+    select s.*,
+      a.id answer_id,a.content answer_content,a.subject_id answer_subject_id,
+      a.score answer_score,a.sort answer_sort,a.create_time answer_create_time
+    from q_subject s,q_answer a
+    where s.id = a.subject_id
+    and s.project_id = #{projectId,jdbcType=INTEGER}
+    order by s.sort,a.sort
+
+  </select>
+</mapper>

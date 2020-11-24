@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.question.dao.QUserSubjectMapper">
+    <resultMap id="BaseResultMap" type="com.question.entity.QUserSubject">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="user_project_id" jdbcType="INTEGER" property="userProjectId" />
+        <result column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="project_id" jdbcType="INTEGER" property="projectId" />
+        <result column="subject_id" jdbcType="INTEGER" property="subjectId" />
+        <result column="answer_id" jdbcType="INTEGER" property="answerId" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="description" jdbcType="VARCHAR" property="description" />
+        <result column="filed" jdbcType="VARCHAR" property="filed" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, user_project_id, user_id, project_id, subject_id, answer_id, create_time, status, 
+    description, filed
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from q_user_subject
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from q_user_subject
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.question.entity.QUserSubject">
+    insert into q_user_subject (id, user_project_id, user_id, 
+      project_id, subject_id, answer_id, 
+      create_time, status, description, 
+      filed)
+    values (#{id,jdbcType=INTEGER}, #{userProjectId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, 
+      #{projectId,jdbcType=INTEGER}, #{subjectId,jdbcType=INTEGER}, #{answerId,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}, 
+      #{filed,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.question.entity.QUserSubject">
+        insert into q_user_subject
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="userProjectId != null">
+                user_project_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="projectId != null">
+                project_id,
+            </if>
+            <if test="subjectId != null">
+                subject_id,
+            </if>
+            <if test="answerId != null">
+                answer_id,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="description != null">
+                description,
+            </if>
+            <if test="filed != null">
+                filed,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="userProjectId != null">
+                #{userProjectId,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="projectId != null">
+                #{projectId,jdbcType=INTEGER},
+            </if>
+            <if test="subjectId != null">
+                #{subjectId,jdbcType=INTEGER},
+            </if>
+            <if test="answerId != null">
+                #{answerId,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="description != null">
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="filed != null">
+                #{filed,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.question.entity.QUserSubject">
+        update q_user_subject
+        <set>
+            <if test="userProjectId != null">
+                user_project_id = #{userProjectId,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="projectId != null">
+                project_id = #{projectId,jdbcType=INTEGER},
+            </if>
+            <if test="subjectId != null">
+                subject_id = #{subjectId,jdbcType=INTEGER},
+            </if>
+            <if test="answerId != null">
+                answer_id = #{answerId,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="filed != null">
+                filed = #{filed,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.question.entity.QUserSubject">
+    update q_user_subject
+    set user_project_id = #{userProjectId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      project_id = #{projectId,jdbcType=INTEGER},
+      subject_id = #{subjectId,jdbcType=INTEGER},
+      answer_id = #{answerId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=INTEGER},
+      description = #{description,jdbcType=VARCHAR},
+      filed = #{filed,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+    <insert id="batchInsertQUserSubject" parameterType="java.util.ArrayList">
+        insert into q_user_subject
+        (user_project_id,user_id,project_id,subject_id,answer_id,create_time,status,description,filed)
+        values
+        <foreach collection="list" item="userSubject" separator=",">
+            (#{userSubject.userProjectId,jdbcType=INTEGER},#{userSubject.userId,jdbcType=INTEGER},
+            #{userSubject.projectId,jdbcType=INTEGER},#{userSubject.subjectId,jdbcType=INTEGER},
+            #{userSubject.answerId,jdbcType=INTEGER},#{userSubject.createTime,jdbcType=TIMESTAMP},#{userSubject.status,jdbcType=INTEGER},
+            #{userSubject.description,jdbcType=VARCHAR},#{userSubject.filed,jdbcType=VARCHAR})
+        </foreach>
+    </insert>
+
+    <select id="getUserAnswerInfo" parameterType="com.question.entity.QUserProject" resultType="com. question.dto.UserAnswerInfoDto">
+        SELECT u.real_name,p.title project_name,s.sort subject_sort,s.title subject_name,a.sort answer_sort,a.content answer_content,a.score
+        FROM `q_user_subject` us,q_user u,q_subject s,q_project p,q_answer a
+        where us.user_id = u.id and us.project_id = p.id and us.subject_id = s.id and us.answer_id = a.id
+        and us.user_project_id=#{id,jdbcType=INTEGER} order by s.sort asc
+        limit #{offset,jdbcType=INTEGER},#{limit,jdbcType=INTEGER}
+  </select>
+
+    <select id="getUserAnswerInfoCount" parameterType="int" resultType="int">
+        SELECT count(*)
+        FROM `q_user_subject` us,q_user u,q_subject s,q_project p,q_answer a
+        where us.user_id = u.id and us.project_id = p.id and us.subject_id = s.id and us.answer_id = a.id
+        and us.user_project_id=#{userProjectId,jdbcType=INTEGER}
+  </select>
+
+    <resultMap id="FactorMap" type="com.question.dto.UserProjectFactorDto">
+        <result column="factor_name" jdbcType="VARCHAR" property="factorName" />
+        <result column="factor_score" jdbcType="DOUBLE" property="factorScore" />
+        <result column="factor_count" jdbcType="INTEGER" property="factorCount" />
+    </resultMap>
+
+    <select id="getUserProjectFactor" resultMap="FactorMap">
+        select
+        <if test="factorType==0">
+        max(f.factor_name) factor_name,
+    </if>
+        <if test="factorType==1">
+        max(f.subfactor_name) factor_name,
+    </if>
+        sum(a.score) factor_score,count(s.sort) factor_count
+    from q_user_subject us,q_subject s,q_answer a,q_factor f
+    where us.subject_id = s.id and us.answer_id = a.id and s.factor_id = f.factor_id and s.subfactor_id = f.subfactor_id
+        and us.user_project_id = #{userProjectId,jdbcType=INTEGER}
+    group by
+        <if test="factorType==0">
+            s.factor_id
+        </if>
+        <if test="factorType==1">
+            s.subfactor_id
+        </if>
+    </select>
+
+</mapper>

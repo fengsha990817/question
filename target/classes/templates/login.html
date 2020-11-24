@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>登录</title>
+    <!--手机端需要添加-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <!--手机端需要添加---->
+    <link rel="stylesheet" href="/css/test_rx.css">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="js/jQuery.fontFlex.js"></script>
+    <script>
+       $(function () {
+            //320宽度的时候html字体大小是20px;、640宽度的时候html字体大小是40px;
+            $('html').fontFlex(20, 40, 16);
+            //
+            $(".dxt_box li").bind("click",function () {
+                $(this).addClass("on").siblings().removeClass("on");
+            });
+            $("#login_btn").bind("click",function(){
+               $("#login_form").submit();
+            });
+           $("#register_btn").bind("click",function(){
+               location.href="/registerPage";
+           });
+
+        });
+    </script>
+</head>
+<body>
+<div class="main">
+    <form action="/login" method="post" id="login_form">
+        <div class="wjdt_title" style="text-align: left">
+            <div style="display: inline-block">
+                <img src="/images/ls.svg" style="width:3rem;" alt=""/>
+            </div>
+            <div style="display: inline-block">
+                <h3>心理测评</h3>
+                <p>心理素质测评系统</p>
+            </div>
+        </div>
+        <div class="dtks_box">
+            <div class="kcks_title_ts">
+                <h4 class=" kctm_zzbt">用户登录</h4>
+                <div class="bitr_box">
+                    <div>
+                        <input id="username" type="text" name="username" placeholder="用户名">
+                    </div>
+                    <div>
+                        <input id="password" type="password" name="password" placeholder="密码">
+                    </div>
+                    <h5 style="color:red" th:text="${msg}"></h5>
+                </div>
+
+            </div>
+        </div>
+        <!--结束------------------------------------------>
+
+        <div class="kasj_db_but" id="login_btn"><a>登录</a></div>
+        <!--<div class="kasj_db_but" id="register_btn"><a>注册</a></div>-->
+    </form>
+    <div class="h50"></div>
+</div>
+</body>
+</html>

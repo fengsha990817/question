@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.question.dao.QAnswerMapper">
+    <resultMap id="BaseResultMap" type="com.question.entity.QAnswer">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="content" jdbcType="VARCHAR" property="content" />
+        <result column="subject_id" jdbcType="INTEGER" property="subjectId" />
+        <result column="score" jdbcType="DOUBLE" property="score" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, content, subject_id, score, sort, create_time
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from q_answer
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from q_answer
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.question.entity.QAnswer">
+    insert into q_answer (id, content, subject_id, score, sort, create_time)
+    values (#{id,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, #{subjectId,jdbcType=INTEGER}, 
+      #{score,jdbcType=DOUBLE}, #{sort,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+    <insert id="insertSelective" parameterType="com.question.entity.QAnswer">
+        insert into q_answer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="subjectId != null">
+                subject_id,
+            </if>
+            <if test="score != null">
+                score,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="subjectId != null">
+                #{subjectId,jdbcType=INTEGER},
+            </if>
+            <if test="score != null">
+                #{score,jdbcType=DOUBLE},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.question.entity.QAnswer">
+        update q_answer
+        <set>
+            <if test="content != null">
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="subjectId != null">
+                subject_id = #{subjectId,jdbcType=INTEGER},
+            </if>
+            <if test="score != null">
+                score = #{score,jdbcType=DOUBLE},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.question.entity.QAnswer">
+        update q_answer
+        set content = #{content,jdbcType=VARCHAR},
+          subject_id = #{subjectId,jdbcType=INTEGER},
+          score = #{score,jdbcType=DOUBLE},
+          sort = #{sort,jdbcType=INTEGER},
+          create_time = #{createTime,jdbcType=TIMESTAMP}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <select id="getAnswerScoreByIds" resultType="java.lang.Double" parameterType="java.util.List">
+        select sum(score) from q_answer
+        where id in
+        <foreach item="item" index="index" collection="ids" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

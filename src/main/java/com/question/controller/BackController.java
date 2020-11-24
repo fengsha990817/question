@@ -47,5 +47,12 @@ public class BackController {
         return "back/login";
     }
 
+    @RequestMapping("/back/logout")
+    public String logout(){
+        ShiroUtils.logout();
+        System.out.println("info");
+        return "back/login";
+    }
+
 
 }

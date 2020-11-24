@@ -162,7 +162,7 @@
         </foreach>
     </insert>
 
-    <select id="getUserAnswerInfo" parameterType="com.question.entity.QUserProject" resultType="com. question.dto.UserAnswerInfoDto">
+    <select id="getUserAnswerInfo" parameterType="com.question.entity.QUserProject" resultType="com.question.dto.UserAnswerInfoDto">
         SELECT u.real_name,p.title project_name,s.sort subject_sort,s.title subject_name,a.sort answer_sort,a.content answer_content,a.score
         FROM `q_user_subject` us,q_user u,q_subject s,q_project p,q_answer a
         where us.user_id = u.id and us.project_id = p.id and us.subject_id = s.id and us.answer_id = a.id

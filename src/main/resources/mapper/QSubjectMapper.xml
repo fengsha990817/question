@@ -13,7 +13,7 @@
         <result column="factor_type" jdbcType="INTEGER" property="factorType" />
         <result column="factor_id" jdbcType="INTEGER" property="factorId" />
         <result column="subfactorId" jdbcType="INTEGER" property="subfactorId" />
-        <collection property="answerList" ofType="com. question.entity.QAnswer" column="answer">
+        <collection property="answerList" ofType="com.question.entity.QAnswer" column="answer">
             <id property="id" column="answer_id" javaType="int" jdbcType="INTEGER" />
             <result column="answer_content" javaType="string" jdbcType="VARCHAR" property="content" />
             <result column="answer_subject_id" jdbcType="INTEGER" property="subjectId" />

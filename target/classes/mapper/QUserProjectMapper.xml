@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.question.dao.QUserProjectMapper">
-    <resultMap id="BaseResultMap" type="com. question.entity.QUserProject">
+    <resultMap id="BaseResultMap" type="com.question.entity.QUserProject">
         <id column="id" jdbcType="INTEGER" property="id" />
         <result column="user_id" jdbcType="INTEGER" property="userId" />
         <result column="project_id" jdbcType="INTEGER" property="projectId" />
@@ -107,11 +107,11 @@
         insert into q_user_project (user_id, project_id,score, create_time, status) values
         (#{userId,jdbcType=INTEGER}, #{projectId,jdbcType=INTEGER},  #{score,jdbcType=DOUBLE},now(),0)
     </insert>
-    <select id="getUserQiestionsProject1" resultType="com.question.dto.QuestionSLCDto" parameterType="com. question.dto.QuestionSLCDto"></select>
-    <select id="getUserQiestionsProject2" resultType="com.question.dto.QuestionDSQDto" parameterType="com. question.dto.QuestionDSQDto"></select>
+    <select id="getUserQiestionsProject1" resultType="com.question.dto.QuestionSLCDto" parameterType="com.question.dto.QuestionSLCDto"></select>
+    <select id="getUserQiestionsProject2" resultType="com.question.dto.QuestionDSQDto" parameterType="com.question.dto.QuestionDSQDto"></select>
 
 
-    <select id="getUserQuestions" resultType="com.question.dto.QuestionDto" parameterType="com. question.dto.QuestionDto">
+    <select id="getUserQuestions" resultType="com.question.dto.QuestionDto" parameterType="com.question.dto.QuestionDto">
         select up.*,u.real_name,u.username,u.major,u.gender,u.mobile,p.title  projectName
         from q_user_project up,q_user u,q_project p
         where up.user_id = u.id and up.project_id = p.id

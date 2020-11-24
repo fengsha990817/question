@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>开始测评</title>
+    <!--手机端需要添加-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <!--手机端需要添加---->
+    <link rel="stylesheet" href="/css/test_rx.css">
+    <link rel="stylesheet" href="/css/dialog/animate.min.css">
+</head>
+<body>
+<div class="main">
+    <div class="wjdt_title" style="text-align: left">
+        <div style="display: inline-block">
+            <img src="/images/ls.svg" style="width:3rem;" alt="">
+        </div>
+        <div style="display: inline-block">
+            <h3>心理测评</h3>
+            <p th:text="${project.title}"></p>
+        </div>
+    </div>
+    <div class="dtks_box" id="project" th:attr="pid=${project.id}">
+        <div th:each="subject,stat:${subjects}" th:class="@{'kcks_title_ts'+${stat.first?' current':' hide'}}"
+             th:attr="index =${stat.index},indexR=${stat.size-stat.count}">
+            <h4 style="height:2rem;" class=" kctm_zzbt" th:text="@{${stat.count}+'、'+${subject.title}}"></h4>
+            <ul class="dxt_box">
+                <li th:each="answer:${subject.answerList}" th:attr="subject_id=${subject.id},answer_id=${answer.id}">
+                    <em></em><span th:text="${answer.content}"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="text-align: center">
+        <div class="kasj_db_but" style="display: inline-block; width:30%">
+            <a href="javascript:void(0);" class=" btn prev">上一题</a>
+        </div>
+        <div class="kasj_db_but" style="display: inline-block; width:30%;margin-left: 10%">
+            <a href="javascript:void(0);" class="btn next">下一题</a>
+        </div>
+    </div>
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="/js/jQuery.fontFlex.js"></script>
+<script src="/js/jquery.hDialog.js"></script>
+<script>
+    $(function () {
+        //320宽度的时候html字体大小是20px;、640宽度的时候html字体大小是40px;
+        $('html').fontFlex(20, 40, 16);
+        $(".dxt_box li").bind("click", function () {
+            $(this).addClass("on").siblings().removeClass("on");
+            let item = $(this).parent(".dxt_box").parent(".kcks_title_ts");
+            if (item.attr("indexR") !== "0") {
+                toNext();
+            }
+        });
+        /*上一题*/
+        $('.prev').bind("click", function () {
+            let current = $('.current');
+            if (current.attr("index") === "0") return;
+            $('.next').text('下一题');
+            current.removeClass("current").slideUp().prev().slideDown().addClass("current");
+        });
+        /*下一题*/
+        $(".next").bind('click', function () {
+            toNext();
+        });
+
+        /*跳转到下一题*/
+        function toNext() {
+            let current = $('.current');
+            if ($(current).children('.dxt_box').children('.on').length === 0) {
+                $.tooltip('请至少选择一个选项', '2000', false);
+                return;
+            }
+            if (current.attr("indexR") === "0") {
+                submitAnswer();
+                return;
+            }
+            if (current.next().attr("indexR") === '0') {
+                $('.next').text('提交');
+            }
+            current.removeClass("current").slideUp().next().slideDown().addClass("current");
+        }
+        function submitAnswer() {
+            $(".btn").off();
+            let form = [];
+            let projectId = $("#project").attr("pid");
+            $(".dtks_box").children(".kcks_title_ts").each(function () {
+                let on = $($(this).children(".dxt_box").children(".on").get(0));
+                let answerId = on.attr("answer_id");
+                let subjectId = on.attr("subject_id");
+                let userSubject = {projectId:projectId,subjectId:subjectId,answerId:answerId}
+                form.push(userSubject);
+            });
+            console.log(JSON.stringify(form));
+            $.ajax({
+                url: "/submitAnswer",
+                type: "post",
+                contentType:'application/json',
+                data: JSON.stringify(form),
+                success: function (result) {
+                    if (result.status) {
+                        $.tooltip("提交成功，跳转中。。。", "2000", true);
+                        setTimeout(function () {
+                            location.href = "/selectPage"
+                        }, 500);
+                    } else {
+                        $.tooltip(result.msg, "1500", false);
+                    }
+                }
+            });
+        }
+        $(document).on("keydown ", function (e) {
+            if (e.key === "F12") {
+                return;
+            }
+            e.preventDefault();
+        });
+    })
+</script>
+</body>
+</html>

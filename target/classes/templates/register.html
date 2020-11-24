@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>注册</title>
+    <!--手机端需要添加-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <!--手机端需要添加---->
+    <link rel="stylesheet" href="/css/test_rx.css">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="/js/jQuery.fontFlex.js"></script>
+    <script>
+        let registerFlag = false;
+        $(function () {
+            //320宽度的时候html字体大小是20px;、640宽度的时候html字体大小是40px;
+            $('html').fontFlex(20, 40, 16);
+            //
+            $(".dxt_box li").bind("click", function () {
+                $(this).addClass("on").siblings().removeClass("on");
+            });
+            /*下拉框开始*/
+            $(".select p").bind("click", function (e) {
+                $(".select").toggleClass('open');
+                e.stopPropagation();
+            });
+
+            $(".selectD .select ul li").bind("click", function (e) {
+                let _this = $(this);
+                $(".select > p").text(_this.text());
+                _this.addClass("Selected").siblings().removeClass("Selected");
+                $(".select").removeClass("open");
+                $("#gender").val(_this.attr("data-value"));
+                e.stopPropagation();
+            });
+
+            $(document).on('click', function () {
+                $(".select").removeClass("open");
+            })
+            /*下拉框结束*/
+            /*注册提交*/
+            $("#login_btn").bind("click",function(){
+                location.href="/loginPage";
+            });
+            $("#register_btn").bind("click",function(){
+                let pass = $("#password").val();
+                let passR = $("#passwordR").val();
+                if($("#username").val()==""){
+                    $("#msg").text("用户名不可为空");
+                    return;
+                }
+                if(!registerFlag){
+                    $("#msg").text("用户名已被注册");
+                    return;
+                }
+                if($("#gender").val()==""){
+                    $("#msg").text("请选择性别");
+                    return;
+                }
+                if($("#password").val()==""){
+                    $("#msg").text("请输入密码");
+                    return;
+                }
+                if(pass!==passR){
+                    $("#msg").text("两次密码输入不一致");
+                    return;
+                }
+                $("#register_form").submit();
+            });
+            $("input").bind("keydown",function(){
+                $("#msg").text("");
+            });
+            $("#username").bind("keyup",function(){
+                registerFlag= false;
+                $.ajax({
+                    url:"/checkUsername",
+                    type:"post",
+                    data:{username:$(this).val()},
+                    success:function(result){
+                        if("false"===result){
+                            $("#msg").text("用户名已被注册");
+                            registerFlag= false;
+                            return;
+                        }
+                        registerFlag = true;
+                    }
+                });
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+<div class="main">
+    <div class="wjdt_title" style="text-align: left">
+        <div style="display: inline-block">
+            <img src="/images/ls.svg" style="width:3rem;" alt=""/>
+        </div>
+        <div style="display: inline-block">
+            <h3>心理测评</h3>
+            <p>心理素质测评系统</p>
+        </div>
+    </div>
+    <div class="dtks_box">
+        <form action="/register" method="post" id="register_form">
+            <div class="kcks_title_ts">
+                <h4 class=" kctm_zzbt">用户注册</h4>
+                <div class="bitr_box">
+                    <div>
+                        <input id="username" type="text" name="username" placeholder="用户名" autocomplete="false">
+                    </div>
+                    <div>
+                        <input id="mobile" type="text" name="mobile" placeholder="手机号码" autocomplete="false"/>
+                    </div>
+                    <div>
+                        <input id="realName" type="text" name="realName" placeholder="用户昵称" autocomplete="false"/>
+                    </div>
+
+                    <div>
+                        <input id="gender" type="hidden" name="gender"/>
+                        <div class="selectD" id="selectD">
+                            <div class="select">
+                                <p data-value="">选择性别</p>
+                                <ul>
+                                    <li data-value="1" class="Selected">男</li>
+                                    <li data-value="0">女</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input id="password" type="password" name="password" placeholder="密码">
+                    </div>
+                    <div>
+                        <input id="passwordR" type="password" placeholder="重复密码">
+                    </div>
+                    <h5 id="msg" style="color:red;" th:text="${msg}"></h5>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--结束------------------------------------------>
+
+    <div class="kasj_db_but" id="register_btn"><a>注册</a></div>
+    <div class="kasj_db_but" id="login_btn"><a>返回登录</a></div>
+    <div class="h50"></div>
+</div>
+</body>
+</html>

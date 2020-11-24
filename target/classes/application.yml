@@ -1,5 +1,5 @@
 server:
-  port:  8080
+  port: 8080
   servlet:
     session:
       timeout: 720m
@@ -17,7 +17,6 @@ spring:
     name: mysql-druidpool
     url: jdbc:mysql://localhost:3306/question?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
-    ##password: 3_LuDaXian
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
     druid:

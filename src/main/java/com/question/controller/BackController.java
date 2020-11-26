@@ -1,6 +1,5 @@
 package com.question.controller;
 
-
 import com.question.service.UserService;
 import com.question.util.ShiroUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -23,36 +22,35 @@ public class BackController {
     }
 
     @GetMapping("/back")
-    public String index(ModelMap map){
-            String name = ShiroUtils.getSysUser().getUserName();
-        map.put("name",name!=null?name:"未登录");
+    public String index(ModelMap map) {
+        String name = ShiroUtils.getSysUser().getUserName();
+        map.put("name", name != null ? name : "未登录");
         return "back/index";
     }
 
     @RequestMapping("/back/login")
-    public String login(Model model, HttpServletRequest req){
+    public String login(Model model, HttpServletRequest req) {
 
         String exception = (String) req.getAttribute("shiroLoginFailure");
         if (exception != null) {
             if (UnknownAccountException.class.getName().equals(exception)) {
                 model.addAttribute("msg", "账号不存在");
             } else if (IncorrectCredentialsException.class.getName().equals(exception)) {
-                model.addAttribute("msg","密码不正确：");
+                model.addAttribute("msg", "密码不正确：");
             } else if ("kaptchaValidateFailed".equals(exception)) {
-                model.addAttribute("msg","验证码错误");
+                model.addAttribute("msg", "验证码错误");
             } else {
-                model.addAttribute("msg","系统错误");
+                model.addAttribute("msg", "系统错误");
             }
         }
         return "back/login";
     }
 
     @RequestMapping("/back/logout")
-    public String logout(){
+    public String logout() {
         ShiroUtils.logout();
         System.out.println("info");
         return "back/login";
     }
-
 
 }
